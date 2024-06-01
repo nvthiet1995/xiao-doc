@@ -1,4 +1,7 @@
+docker ps
+# find container_id
 docker exec -it {CONTAINER_ID} /bin/sh
 ls
 cd /opt/bitnami/kafka/bin
+#replace test => topic_name
 kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
